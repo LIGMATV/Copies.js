@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+<script src="jquery.min.js"></script>  
+</head>
+
+<center>
+
+<br/><br/>
+<h1 style="font-size: 50px;">Copies.js</h1>
+
+<h3>We just need <span style="text-decoration: underline">copy</span> text</h3>
+<p>Not need an seperate file, add this code to your <code>script.js</code> or <code>&lt;script&gt;</code></p>
+
+<br/>
+<script src="https://gist.github.com/LIGMATV/fa9d2139b5ee7a831c927f8b89d1fc59.js"></script>
+<br/>
+
+<!-- Visible -->
+<p id="p1">This 1st text is visible</p>
+<p id="p2">This 2st text is visible</p><br/>
+
+<!-- Hidden -->
+<p id="p3" hidden>This 1st text is hidden!</p>
+<p id="p4" hidden>This 2st text is hidden!</p>
+
+<!-- Buttons -->
+<button onclick="copyToClipboard('#p1')">Copy 1st visible</button>
+<button onclick="copyToClipboard('#p2')">Copy 2st visible</button><br/><br/>
+
+<!-- Buttons -->
+<button onclick="copyToClipboard('#p3')">Copy 1st hidden</button>
+<button onclick="copyToClipboard('#p4')">Copy 2st hidden</button><br/><br/>
+  
+<br/><br/>
+<textarea rows="2" cols="35" placeholder="You always can test"></textarea><br/><br/>
+
+<br/><br/>
+<h3>Want <span style="text-decoration: underline">hidden</span> or visible?</h3>
+
+<br/><br/>
+<script src="https://gist.github.com/LIGMATV/be5d2dddc54f5fe4827bceafabcbd8fb.js"></script>
+
+<br/>
+<p>To make the copied text hidden, just add <code>hidden</code>.</p>
+
+
+<br/><br/>
+<h3><span style="text-decoration: underline">jQuery</span> needed!</h3>
+
+<script src="https://gist.github.com/LIGMATV/12986e20d0b86c6b473be87a292b5355.js"></script>
+
+<br/><br/>
+
+<h3><img src="https://em-content.zobj.net/source/apple/118/white-heavy-check-mark_2705.png" width="15px"> You done!</h3>
+
+</center>
+
+<script>
+/** Copies.js */
+function copyToClipboard(element) { var $temp = $("<input>"); $("body").append($temp); $temp.val($(element).text()).select(); document.execCommand("copy"); $temp.remove(); }
+</script>
